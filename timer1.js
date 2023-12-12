@@ -1,12 +1,12 @@
-//command line arg 
+//command line arg
 const args = process.argv.slice(2);
 
-//alarm function 
-const alarm  = function (time) {
+//alarm function
+const alarm  = function(time) {
   if (time > 0 && !isNaN(time)) { //rule out edge cases by checking if time is positive and not NaN
     setTimeout(() => { //schedule alarm sound via setTimeout
-      process.stdout.write('\x07'); // node system beep sound 
-    }, time * 1000);     
+      process.stdout.write('\x07'); // node system beep sound
+    }, time * 1000);
   }
 };
 
